@@ -1,0 +1,21 @@
+<input type="number" id="terms" placeholder="Enter number of terms" />
+<button onclick="showFibonacci()">Show Fibonacci</button>
+<p id="output"></p>
+
+<script>
+function showFibonacci() {
+    let n = Number(document.getElementById("terms").value);
+    let a = 0, b = 1;
+    let fibSeries = [];
+
+    for (let i = 1; i <= n; i++) {
+        fibSeries.push(a);
+        let next = a + b;
+        a = b;
+        b = next;
+    }
+
+    document.getElementById("output").textContent = 
+        `Fibonacci series up to ${n} terms: ${fibSeries.join(", ")}`;
+}
+</script>

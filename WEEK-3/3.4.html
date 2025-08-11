@@ -1,0 +1,12 @@
+<input type="number" id="num" placeholder="Enter a number">
+<button onclick="findSum()">Find Sum</button>
+<p id="output"></p>
+
+<script>
+function findSum() {
+    let n = Number(document.getElementById("num").value);
+    let sum = (n * (n + 1)) / 2;
+    document.getElementById("output").textContent =
+        `Sum of numbers from 1 to ${n} is ${sum}`;
+}
+</script>

@@ -1,0 +1,11 @@
+<input type="number" id="num" placeholder="Enter a number">
+<button onclick="reverseNumber()">Reverse</button>
+<p id="output"></p>
+
+<script>
+function reverseNumber() {
+    let num = document.getElementById("num").value;
+    let reversed = num.split('').reverse().join('');
+    document.getElementById("output").textContent = `Reversed number is ${reversed}`;
+}
+</script>

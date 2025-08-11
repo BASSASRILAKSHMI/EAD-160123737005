@@ -1,0 +1,16 @@
+<input type="number" id="userNumber" placeholder="Enter a number">
+<button onclick="showTable()">Show Table</button>
+<pre id="output"></pre>
+
+<script>
+function showTable() {
+    let num = Number(document.getElementById("userNumber").value);
+    let result = "";
+
+    for (let i = 1; i <= 10; i++) {
+        result += `${num} x ${i} = ${num * i}\n`;
+    }
+
+    document.getElementById("output").textContent = result;
+}
+</script>

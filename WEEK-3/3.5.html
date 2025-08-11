@@ -1,0 +1,15 @@
+<input type="number" id="num" placeholder="Enter a number">
+<button onclick="findFactorial()">Find Factorial</button>
+<p id="output"></p>
+
+<script>
+function findFactorial() {
+    let n = Number(document.getElementById("num").value);
+    let fact = 1;
+    for (let i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    document.getElementById("output").textContent =
+        `Factorial of ${n} is ${fact}`;
+}
+</script>
